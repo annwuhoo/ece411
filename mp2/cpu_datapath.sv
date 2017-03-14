@@ -1,0 +1,322 @@
+import lc3b_types::*;
+
+module cpu_datapath
+(
+	input clk,
+
+    /* control to datapath */
+	input [1:0] pcmux_sel, // PC
+	input load_pc, pcaddermux_sel,
+	input load_ir, storemux_sel, destmux_sel, // IR and REGFILE
+   input load_regfile, 
+	input [2:0] regfilemux_sel,
+	input [1:0] alumux_sel, // ALU
+	input lc3b_aluop aluop,
+	input load_cc, // BRANCH
+	input load_mar, load_mdr, // MAR and MDR
+	input [1:0] marmux_sel, mdrmux_sel,
+	
+	/* memory to datapath */
+	input lc3b_word mem_rdata,
+	
+	/* datapath to control */
+	output lc3b_opcode opcode,
+	output branch_enable,
+	output lc3b_bit bit5, bit11,
+	
+	/* datapath to memory */
+	output lc3b_word mem_wdata, mem_address
+);
+
+/* Declare internal signals */
+// PC
+lc3b_word pcmux_out, pcaddermux_out, pc_out, br_add_out, pc_plus2_out, adj9_out, adj11_out;
+
+// IR
+lc3b_reg sr1, sr2, dest, storemux_out, destmux_out, r7;
+lc3b_bit bit4;
+lc3b_offset6 offset6;
+lc3b_offset9 offset9;
+lc3b_offset11 offset11;
+lc3b_word adj6_out, sext5_out, sext6_out, trapzext_out, trapadj_out;
+lc3b_imm4 imm4;
+lc3b_imm5 imm5;
+lc3b_trap8 trapvect8;
+
+assign r7 = 3'b111; // tie this logic to R7
+
+// REGFILE
+lc3b_word sr1_out, sr2_out, regfilemux_out, zext8_out, shf_out, clb_out;
+lc3b_byte ldbmux_out;
+
+// ALU
+lc3b_word alumux_out, alu_out;
+
+// BRANCH
+lc3b_nzp gencc_out, cc_out;
+
+// MAR and MDR
+lc3b_word mar_in, mdr_in;
+
+
+/* Datapath modules */
+// PC
+plus2 pc_plus2
+(
+	.in(pc_out),
+	.out(pc_plus2_out)
+);
+ 
+mux4 pcmux
+(
+	.sel(pcmux_sel),
+	.a(pc_plus2_out),
+   .b(br_add_out),
+	.c(sr1_out), // for jmp
+	.d(mem_wdata), // for trap
+   .f(pcmux_out)
+);
+
+register pc
+(
+	.clk,
+   .load(load_pc),
+   .in(pcmux_out),
+   .out(pc_out)
+);
+
+adj #(.width(9)) adj9
+(
+    .in(offset9),
+    .out(adj9_out)
+);
+
+adj #(.width(11)) adj11
+(
+    .in(offset11),
+    .out(adj11_out)
+);
+
+mux2 pcaddermux
+(
+	.sel(pcaddermux_sel),
+	.a(adj9_out),
+	.b(adj11_out),
+	.f(pcaddermux_out)
+);
+
+br_add pc_adder
+(
+	.pc_addr_in(pc_out),
+	.offset_in(pcaddermux_out),
+	.pc_addr_out(br_add_out)
+);
+
+
+// IR
+ir ir0
+(
+    .clk,
+    .load(load_ir),
+    .in(mem_wdata),
+    .opcode,
+    .dest,
+	 .src1(sr1), 
+	 .src2(sr2),
+    .offset6,
+    .offset9,
+	 .offset11,
+	 .imm4,
+	 .imm5,
+	 .trapvect8,
+	 .bit4,
+	 .bit5,
+	 .bit11
+);
+
+sext #(.width(5)) sext5
+(
+    .in(imm5),
+    .out(sext5_out)
+);
+
+sext #(.width(6)) sext6
+(
+    .in(offset6),
+    .out(sext6_out)
+);
+
+zext #(.width(8)) trapzext
+(
+	.in(trapvect8),
+	.out(trapzext_out)
+);
+
+adj #(.width(15)) trapadj
+(
+	.in(trapzext_out[14:0]), // otherwise gives a truncation warning (and I don't like warnings)
+	.out(trapadj_out)
+);
+
+
+mux2 #(.width(3)) storemux
+(
+	.sel(storemux_sel),
+	.a(sr1),
+	.b(dest),
+	.f(storemux_out)
+);
+
+adj #(.width(6)) adj6
+(
+    .in(offset6),
+    .out(adj6_out)
+);
+
+mux2 #(.width(3)) destmux
+(
+	.sel(destmux_sel),
+	.a(dest),
+	.b(r7),
+	.f(destmux_out)
+);
+
+// REGFILE
+
+mux2 #(.width(8)) ldbmux // chooses between high/low byte of the data for the ldb instruction
+(
+	.sel(mem_address[0]),
+	.a(mem_wdata[7:0]),
+	.b(mem_wdata[15:8]),
+	.f(ldbmux_out)
+);
+
+zext #(.width(8)) zext8
+(
+	.in(ldbmux_out),
+	.out(zext8_out)
+);
+
+shf shf0
+(
+	.in(sr1_out),
+	.imm4,
+	.dbit(bit4),
+	.abit(bit5),
+	.out(shf_out)
+);
+
+clonelowbyte clb0 // this goes to MDR
+(
+	.in(sr1_out),
+	.out(clb_out)
+);
+
+mux8 regfilemux 
+(
+	.sel(regfilemux_sel),
+	.a(alu_out),
+	.b(mem_wdata),
+	.c(br_add_out),
+	.d(pc_out),
+	.e(zext8_out),
+	.f(shf_out),
+	.g(),
+	.h(),
+	.z(regfilemux_out)
+);
+
+regfile regfile0
+(
+	.clk,
+	.load(load_regfile),
+   .in(regfilemux_out),
+   .src_a(storemux_out),
+	.src_b(sr2),
+	.dest(destmux_out),
+   .reg_a(sr1_out),
+	.reg_b(sr2_out)
+);
+
+
+// ALU
+mux4 alumux 
+(
+	.sel(alumux_sel),
+	.a(sr2_out),
+	.b(adj6_out),
+	.c(sext5_out),
+	.d(sext6_out),
+	.f(alumux_out)
+);
+
+alu alu0
+(
+    .aluop,
+    .a(sr1_out),
+	 .b(alumux_out),
+    .f(alu_out)
+);
+
+
+// BRANCH
+gencc gencc0
+(
+    .in(regfilemux_out),
+    .out(gencc_out)
+);
+
+register #(.width(3)) cc
+(
+	.clk,
+   .load(load_cc),
+   .in(gencc_out),
+   .out(cc_out)
+);
+
+cccomp cccomp2
+(
+	.in(dest),
+	.nzp(cc_out),
+	.branch_enable
+);
+
+
+// MAR and MDR
+mux4 marmux 
+(
+	.sel(marmux_sel),
+	.a(alu_out),
+	.b(pc_out),
+	.c(mem_wdata),
+	.d(trapadj_out),
+	.f(mar_in)
+);
+
+register mar
+(
+	.clk,
+   .load(load_mar),
+   .in(mar_in),
+   .out(mem_address)
+);
+
+mux4 mdrmux 
+(
+	.sel(mdrmux_sel),
+	.a(alu_out),
+	.b(mem_rdata),
+	.c(clb_out),
+	.d(),
+	.f(mdr_in)
+);
+
+register mdr
+(
+	.clk,
+   .load(load_mdr),
+   .in(mdr_in),
+   .out(mem_wdata)
+);
+
+endmodule : cpu_datapath

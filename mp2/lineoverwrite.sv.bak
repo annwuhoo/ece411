@@ -1,0 +1,30 @@
+import lc3b_types::*;
+
+/* 
+ * Truncates the cache line to the correct word based on the offset
+ * Granularity = 16 bit
+ */
+module lineoverwrite
+(
+	input [2:0] offset,
+	input lc3b_line datain,
+	input  lc3b_mem_wmask mem_byte_enable,
+	output lc3b_line dataout,
+);
+
+// Choose the right word based on the offset
+mux8 #(.width(16)) mux0
+(
+	.sel(offset),
+	.a(data[127:112]), 
+	.b(data[111:96),
+	.c(data[95:80]),
+	.d(data[79:64]), 
+	.e(data[63:48]), 
+	.f(data[47:32]), 
+	.g(data[31:16), 
+	.h(data[15:0]),
+	.z(mem_rdata)
+);
+
+endmodule : lineoverwrite

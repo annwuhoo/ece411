@@ -1,0 +1,19 @@
+import lc3b_types::*;
+
+/*
+ * An array of 8 indices and parametrized width of the data.
+ * if load is asserted, then the data at the input index is overwritten with in.
+ * Output always matches the data at the input index.
+ */
+module dataarray8 #(parameter width = 8)
+(
+	 input  clk,
+    input  [width-1:0] in,
+	 input  [2:0] index,
+	 input  load,
+    output [width-1:0] out
+);
+
+// the index = the load for 
+
+endmodule : adj

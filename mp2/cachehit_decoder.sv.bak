@@ -1,0 +1,15 @@
+import lc3b_types::*;
+
+/* 
+ * Determines if there is a cache_hit, and simultaneously selects the correct way
+ */
+module cachehit_decoder
+(
+	input in0, in1,
+	output cache_hit, way_sel
+);
+
+assign cache_hit = in0 | in1;
+assign way_sel = in1;
+
+endmodule : cachehit_decoder

@@ -1,0 +1,14 @@
+import lc3b_types::*;
+
+/*
+ * A data array of 8 elements and parametrized width of the data elements (default = 8).
+ * if load is asserted, then the data at the input index is overwritten with in.
+ * Output always matches the data at the input index.
+ */
+module lruarb
+(
+	 input  clk,
+    input  in
+);
+
+endmodule : lruarb

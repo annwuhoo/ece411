@@ -1,0 +1,19 @@
+import lc3b_types::*;
+
+module dataarray8_decoder
+(
+	input index,
+	input load,
+	output load0,
+	output load1,
+	output load2,
+	output load3,
+	output load4,
+	output load5,
+	output load6,
+	output load7
+);
+
+
+
+endmodule : dataarray8_decoder

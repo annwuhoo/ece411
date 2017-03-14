@@ -1,0 +1,13 @@
+import lc3b_types::*;
+
+// This is a module supporting the SHF instruction
+module shf #(parameter width = 8)
+(
+    input [width-1:0] in,
+	 input 
+    output lc3b_word out
+);
+
+assign out = $signed(in);
+
+endmodule : sext

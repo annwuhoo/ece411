@@ -1,0 +1,24 @@
+import lc3b_types::*;
+
+// contains the CPU and the cache
+module cache
+(
+    .clk,
+
+    /* Signals between cache and cpu */
+    .mem_resp,
+    .mem_rdata,
+    .mem_read,
+    .mem_write,
+    .mem_byte_enable,
+    .mem_address,
+    .mem_wdata
+	 
+	 /* Signals between cache and main memory */
+	 .pmem_address,
+	 .pmem_rdata,
+	 .pmem_wdata,
+	 .pmem_read,
+	 .pmem_write,
+	 .pmem_resp
+);

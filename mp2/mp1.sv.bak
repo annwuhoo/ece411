@@ -1,0 +1,85 @@
+import lc3b_types::*;
+
+module mp1
+(
+    input clk,
+
+    /* Memory signals */
+    input mem_resp,
+    input lc3b_word mem_rdata,
+    output mem_read,
+    output mem_write,
+    output lc3b_mem_wmask mem_byte_enable,
+    output lc3b_word mem_address,
+    output lc3b_word mem_wdata
+);
+
+/* Internal signals */
+logic pcmux_sel, load_pc, load_ir, storemux_sel, load_regfile, regfilemux_sel, alumux_sel, load_cc, load_mar, load_mdr, marmux_sel, mdrmux_sel;
+lc3b_aluop aluop;
+lc3b_opcode opcode;
+logic branch_enable;
+
+/* Instantiate MP 0 top level blocks here */
+datapath dp
+(
+	.clk,
+	
+    /* control to datapath */
+	.pcmux_sel,
+	.load_pc,
+	.load_ir,
+	.storemux_sel,
+   .load_regfile,
+	.regfilemux_sel,
+	.alumux_sel,
+	.aluop,
+	.load_cc,
+	.load_mar,
+	.load_mdr,
+	.marmux_sel,
+	.mdrmux_sel,
+	
+	/* memory to datapath */
+	.mem_rdata,
+	
+	/* datapath to control */
+	.opcode,
+	.branch_enable,
+	
+	/* datapath to memory */
+	.mem_wdata,
+	.mem_address
+);
+
+control ctrl
+(
+	.clk,
+	
+	/* datapath to control */
+	.opcode,
+	.branch_enable,
+
+    /* control to datapath */
+	.pcmux_sel,
+	.load_pc,
+	.load_ir,
+	.storemux_sel,
+	.load_regfile,
+	.regfilemux_sel,
+	.alumux_sel,
+	.aluop,
+	.load_cc,
+	.load_mar,
+	.load_mdr,
+	.marmux_sel,
+	.mdrmux_sel,
+
+	/* Memory signals */
+	.mem_resp,
+	.mem_read,
+	.mem_write,
+	.mem_byte_enable
+);
+
+endmodule : mp1

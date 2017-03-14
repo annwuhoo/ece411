@@ -1,0 +1,11 @@
+import lc3b_types::*;
+
+module checklruway
+(
+	.lru_bit(lru_out),
+	.way_sel,
+	.cache_hit,
+	.out(checklruway_out)
+);
+
+endmodule : checklruway

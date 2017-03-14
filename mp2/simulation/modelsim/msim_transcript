@@ -1,0 +1,1394 @@
+# do mp2_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/lc3b_types.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package lc3b_types
+# 
+# Top level modules:
+# 	--none--
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/plus2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module plus2
+# 
+# Top level modules:
+# 	plus2
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/register.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/mux2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/br_add.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module br_add
+# 
+# Top level modules:
+# 	br_add
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/mux4.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux4
+# 
+# Top level modules:
+# 	mux4
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/mux8.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux8
+# 
+# Top level modules:
+# 	mux8
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/cache_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cache_control_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cache_control
+# 
+# Top level modules:
+# 	cache_control
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/comparator_v.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package comparator_v_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module comparator_v
+# 
+# Top level modules:
+# 	comparator_v
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/cachehit_decoder.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cachehit_decoder_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cachehit_decoder
+# 
+# Top level modules:
+# 	cachehit_decoder
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/checklruway.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package checklruway_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module checklruway
+# 
+# Top level modules:
+# 	checklruway
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/loadarbitrator_demux.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package loadarbitrator_demux_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module loadarbitrator_demux
+# 
+# Top level modules:
+# 	loadarbitrator_demux
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/lru_way_arbitrator.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package lru_way_arbitrator_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module lru_way_arbitrator
+# 
+# Top level modules:
+# 	lru_way_arbitrator
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/adj.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package adj_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module adj
+# 
+# Top level modules:
+# 	adj
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/alu.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package alu_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/gencc.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package gencc_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module gencc
+# 
+# Top level modules:
+# 	gencc
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/ir.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package ir_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module ir
+# 
+# Top level modules:
+# 	ir
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/regfile.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package regfile_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/cccomp.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cccomp_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cccomp
+# 
+# Top level modules:
+# 	cccomp
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/sext.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package sext_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module sext
+# 
+# Top level modules:
+# 	sext
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/zext.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package zext_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module zext
+# 
+# Top level modules:
+# 	zext
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/lshf.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package lshf_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module lshf
+# 
+# Top level modules:
+# 	lshf
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/rshfl.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package rshfl_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module rshfl
+# 
+# Top level modules:
+# 	rshfl
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/rshfa.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package rshfa_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module rshfa
+# 
+# Top level modules:
+# 	rshfa
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/clonelowbyte.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package clonelowbyte_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module clonelowbyte
+# 
+# Top level modules:
+# 	clonelowbyte
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/cpu_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cpu_control_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cpu_control
+# 
+# Top level modules:
+# 	cpu_control
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/linetruncate.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package linetruncate_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module linetruncate
+# 
+# Top level modules:
+# 	linetruncate
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/lineoverwrite.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package lineoverwrite_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module lineoverwrite
+# 
+# Top level modules:
+# 	lineoverwrite
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/array8.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package array8_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module array8
+# 
+# Top level modules:
+# 	array8
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/pmemconstruct.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package pmemconstruct_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module pmemconstruct
+# 
+# Top level modules:
+# 	pmemconstruct
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/shf.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package shf_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module shf
+# 
+# Top level modules:
+# 	shf
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/cache_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cache_datapath_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cache_datapath
+# 
+# Top level modules:
+# 	cache_datapath
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/cpu_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cpu_datapath_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cpu_datapath
+# 
+# Top level modules:
+# 	cpu_datapath
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/cache.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cache_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cache
+# 
+# Top level modules:
+# 	cache
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/cpu.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cpu_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cpu
+# 
+# Top level modules:
+# 	cpu
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/mp2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mp2_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module mp2
+# 
+# Top level modules:
+# 	mp2
+# 
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/mp2_tb.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mp2_tb
+# 
+# Top level modules:
+# 	mp2_tb
+# vlog -sv -work work +incdir+/home/ywu77/ece411/mp2 {/home/ywu77/ece411/mp2/physical_memory.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module physical_memory
+# 
+# Top level modules:
+# 	physical_memory
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp2_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp2_tb 
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.lc3b_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.plus2
+# Loading work.mux4
+# Loading work.register
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux2
+# Loading work.br_add
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.shf_sv_unit
+# Loading work.shf
+# Loading work.rshfl_sv_unit
+# Loading work.rshfl
+# Loading work.rshfa_sv_unit
+# Loading work.rshfa
+# Loading work.lshf_sv_unit
+# Loading work.lshf
+# Loading work.clonelowbyte_sv_unit
+# Loading work.clonelowbyte
+# Loading work.mux8
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.pmemconstruct_sv_unit
+# Loading work.pmemconstruct
+# Loading work.array8_sv_unit
+# Loading work.array8
+# Loading work.checklruway_sv_unit
+# Loading work.checklruway
+# Loading work.lru_way_arbitrator_sv_unit
+# Loading work.lru_way_arbitrator
+# Loading work.loadarbitrator_demux_sv_unit
+# Loading work.loadarbitrator_demux
+# Loading work.comparator_v_sv_unit
+# Loading work.comparator_v
+# Loading work.cachehit_decoder_sv_unit
+# Loading work.cachehit_decoder
+# Loading work.linetruncate_sv_unit
+# Loading work.linetruncate
+# Loading work.lineoverwrite_sv_unit
+# Loading work.lineoverwrite
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(73): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid0
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(82): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+# Invalid nzp operand
+# Invalid nzp operand
+do mp2_tb_wave.do
+add wave -position 10  sim:/mp2_tb/dut/cpu0/cpu_dp/pc_out
+add wave -position 2  sim:/mp2_tb/dut/cpu0/mem_address
+add wave -position 3  sim:/mp2_tb/dut/cpu0/mem_read
+add wave -position 4  sim:/mp2_tb/dut/cpu0/mem_rdata
+add wave -position 5  sim:/mp2_tb/dut/cpu0/mem_write
+add wave -position 6  sim:/mp2_tb/dut/cpu0/mem_byte_enable
+add wave -position 7  sim:/mp2_tb/dut/cpu0/mem_wdata
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/ywu77/ece411/mp2/simulation/modelsim/mp2_handin.do
+restart -f; run 13500ns
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.lc3b_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.plus2
+# Loading work.mux4
+# Loading work.register
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux2
+# Loading work.br_add
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.shf_sv_unit
+# Loading work.shf
+# Loading work.rshfl_sv_unit
+# Loading work.rshfl
+# Loading work.rshfa_sv_unit
+# Loading work.rshfa
+# Loading work.lshf_sv_unit
+# Loading work.lshf
+# Loading work.clonelowbyte_sv_unit
+# Loading work.clonelowbyte
+# Loading work.mux8
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.pmemconstruct_sv_unit
+# Loading work.pmemconstruct
+# Loading work.array8_sv_unit
+# Loading work.array8
+# Loading work.checklruway_sv_unit
+# Loading work.checklruway
+# Loading work.lru_way_arbitrator_sv_unit
+# Loading work.lru_way_arbitrator
+# Loading work.loadarbitrator_demux_sv_unit
+# Loading work.loadarbitrator_demux
+# Loading work.comparator_v_sv_unit
+# Loading work.comparator_v
+# Loading work.cachehit_decoder_sv_unit
+# Loading work.cachehit_decoder
+# Loading work.linetruncate_sv_unit
+# Loading work.linetruncate
+# Loading work.lineoverwrite_sv_unit
+# Loading work.lineoverwrite
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(73): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid0
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(82): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid1
+# Invalid nzp operand
+# Invalid nzp operand
+# Invalid nzp operand
+restart -f; run 26500ns
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.lc3b_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.plus2
+# Loading work.mux4
+# Loading work.register
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux2
+# Loading work.br_add
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.shf_sv_unit
+# Loading work.shf
+# Loading work.rshfl_sv_unit
+# Loading work.rshfl
+# Loading work.rshfa_sv_unit
+# Loading work.rshfa
+# Loading work.lshf_sv_unit
+# Loading work.lshf
+# Loading work.clonelowbyte_sv_unit
+# Loading work.clonelowbyte
+# Loading work.mux8
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.pmemconstruct_sv_unit
+# Loading work.pmemconstruct
+# Loading work.array8_sv_unit
+# Loading work.array8
+# Loading work.checklruway_sv_unit
+# Loading work.checklruway
+# Loading work.lru_way_arbitrator_sv_unit
+# Loading work.lru_way_arbitrator
+# Loading work.loadarbitrator_demux_sv_unit
+# Loading work.loadarbitrator_demux
+# Loading work.comparator_v_sv_unit
+# Loading work.comparator_v
+# Loading work.cachehit_decoder_sv_unit
+# Loading work.cachehit_decoder
+# Loading work.linetruncate_sv_unit
+# Loading work.linetruncate
+# Loading work.lineoverwrite_sv_unit
+# Loading work.lineoverwrite
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(73): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid0
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(82): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid1
+# Invalid nzp operand
+# Invalid nzp operand
+# Invalid nzp operand
+restart -f; run 13500ns
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.lc3b_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.plus2
+# Loading work.mux4
+# Loading work.register
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux2
+# Loading work.br_add
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.shf_sv_unit
+# Loading work.shf
+# Loading work.rshfl_sv_unit
+# Loading work.rshfl
+# Loading work.rshfa_sv_unit
+# Loading work.rshfa
+# Loading work.lshf_sv_unit
+# Loading work.lshf
+# Loading work.clonelowbyte_sv_unit
+# Loading work.clonelowbyte
+# Loading work.mux8
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.pmemconstruct_sv_unit
+# Loading work.pmemconstruct
+# Loading work.array8_sv_unit
+# Loading work.array8
+# Loading work.checklruway_sv_unit
+# Loading work.checklruway
+# Loading work.lru_way_arbitrator_sv_unit
+# Loading work.lru_way_arbitrator
+# Loading work.loadarbitrator_demux_sv_unit
+# Loading work.loadarbitrator_demux
+# Loading work.comparator_v_sv_unit
+# Loading work.comparator_v
+# Loading work.cachehit_decoder_sv_unit
+# Loading work.cachehit_decoder
+# Loading work.linetruncate_sv_unit
+# Loading work.linetruncate
+# Loading work.lineoverwrite_sv_unit
+# Loading work.lineoverwrite
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(73): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid0
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(82): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid1
+# Invalid nzp operand
+# Invalid nzp operand
+# Invalid nzp operand
+restart -f; run 26500ns
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.lc3b_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.plus2
+# Loading work.mux4
+# Loading work.register
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux2
+# Loading work.br_add
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.shf_sv_unit
+# Loading work.shf
+# Loading work.rshfl_sv_unit
+# Loading work.rshfl
+# Loading work.rshfa_sv_unit
+# Loading work.rshfa
+# Loading work.lshf_sv_unit
+# Loading work.lshf
+# Loading work.clonelowbyte_sv_unit
+# Loading work.clonelowbyte
+# Loading work.mux8
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.pmemconstruct_sv_unit
+# Loading work.pmemconstruct
+# Loading work.array8_sv_unit
+# Loading work.array8
+# Loading work.checklruway_sv_unit
+# Loading work.checklruway
+# Loading work.lru_way_arbitrator_sv_unit
+# Loading work.lru_way_arbitrator
+# Loading work.loadarbitrator_demux_sv_unit
+# Loading work.loadarbitrator_demux
+# Loading work.comparator_v_sv_unit
+# Loading work.comparator_v
+# Loading work.cachehit_decoder_sv_unit
+# Loading work.cachehit_decoder
+# Loading work.linetruncate_sv_unit
+# Loading work.linetruncate
+# Loading work.lineoverwrite_sv_unit
+# Loading work.lineoverwrite
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(73): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid0
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(82): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid1
+# Invalid nzp operand
+# Invalid nzp operand
+# Invalid nzp operand
+add wave -position end  sim:/mp2_tb/dut/cache0/cache_dp0/tag0/data
+add wave -position end  sim:/mp2_tb/dut/cache0/cache_dp0/data0/data
+restart -f; run 26500ns
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.lc3b_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.plus2
+# Loading work.mux4
+# Loading work.register
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux2
+# Loading work.br_add
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.shf_sv_unit
+# Loading work.shf
+# Loading work.rshfl_sv_unit
+# Loading work.rshfl
+# Loading work.rshfa_sv_unit
+# Loading work.rshfa
+# Loading work.lshf_sv_unit
+# Loading work.lshf
+# Loading work.clonelowbyte_sv_unit
+# Loading work.clonelowbyte
+# Loading work.mux8
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.pmemconstruct_sv_unit
+# Loading work.pmemconstruct
+# Loading work.array8_sv_unit
+# Loading work.array8
+# Loading work.checklruway_sv_unit
+# Loading work.checklruway
+# Loading work.lru_way_arbitrator_sv_unit
+# Loading work.lru_way_arbitrator
+# Loading work.loadarbitrator_demux_sv_unit
+# Loading work.loadarbitrator_demux
+# Loading work.comparator_v_sv_unit
+# Loading work.comparator_v
+# Loading work.cachehit_decoder_sv_unit
+# Loading work.cachehit_decoder
+# Loading work.linetruncate_sv_unit
+# Loading work.linetruncate
+# Loading work.lineoverwrite_sv_unit
+# Loading work.lineoverwrite
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(73): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid0
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(82): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid1
+# Invalid nzp operand
+# Invalid nzp operand
+# Invalid nzp operand
+add wave -position end  sim:/mp2_tb/dut/cpu0/cpu_dp/pc_out
+add wave -position 0  sim:/mp2_tb/dut/cache0/cache_dp0/data1/data
+add wave -position 1  sim:/mp2_tb/dut/cache0/cache_dp0/tag1/data
+restart -f; run 26500ns
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.lc3b_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.plus2
+# Loading work.mux4
+# Loading work.register
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux2
+# Loading work.br_add
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.shf_sv_unit
+# Loading work.shf
+# Loading work.rshfl_sv_unit
+# Loading work.rshfl
+# Loading work.rshfa_sv_unit
+# Loading work.rshfa
+# Loading work.lshf_sv_unit
+# Loading work.lshf
+# Loading work.clonelowbyte_sv_unit
+# Loading work.clonelowbyte
+# Loading work.mux8
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.pmemconstruct_sv_unit
+# Loading work.pmemconstruct
+# Loading work.array8_sv_unit
+# Loading work.array8
+# Loading work.checklruway_sv_unit
+# Loading work.checklruway
+# Loading work.lru_way_arbitrator_sv_unit
+# Loading work.lru_way_arbitrator
+# Loading work.loadarbitrator_demux_sv_unit
+# Loading work.loadarbitrator_demux
+# Loading work.comparator_v_sv_unit
+# Loading work.comparator_v
+# Loading work.cachehit_decoder_sv_unit
+# Loading work.cachehit_decoder
+# Loading work.linetruncate_sv_unit
+# Loading work.linetruncate
+# Loading work.lineoverwrite_sv_unit
+# Loading work.lineoverwrite
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(73): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid0
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(82): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid1
+# Invalid nzp operand
+# Invalid nzp operand
+# Invalid nzp operand
+add wave -position 0  sim:/mp2_tb/dut/cache0/cache_dp0/data0/data
+add wave -position 1  sim:/mp2_tb/dut/cache0/cache_dp0/tag0/data
+restart -f; run 26500ns
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.lc3b_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.plus2
+# Loading work.mux4
+# Loading work.register
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux2
+# Loading work.br_add
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.shf_sv_unit
+# Loading work.shf
+# Loading work.rshfl_sv_unit
+# Loading work.rshfl
+# Loading work.rshfa_sv_unit
+# Loading work.rshfa
+# Loading work.lshf_sv_unit
+# Loading work.lshf
+# Loading work.clonelowbyte_sv_unit
+# Loading work.clonelowbyte
+# Loading work.mux8
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.pmemconstruct_sv_unit
+# Loading work.pmemconstruct
+# Loading work.array8_sv_unit
+# Loading work.array8
+# Loading work.checklruway_sv_unit
+# Loading work.checklruway
+# Loading work.lru_way_arbitrator_sv_unit
+# Loading work.lru_way_arbitrator
+# Loading work.loadarbitrator_demux_sv_unit
+# Loading work.loadarbitrator_demux
+# Loading work.comparator_v_sv_unit
+# Loading work.comparator_v
+# Loading work.cachehit_decoder_sv_unit
+# Loading work.cachehit_decoder
+# Loading work.linetruncate_sv_unit
+# Loading work.linetruncate
+# Loading work.lineoverwrite_sv_unit
+# Loading work.lineoverwrite
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(73): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid0
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(82): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid1
+# Invalid nzp operand
+# Invalid nzp operand
+# Invalid nzp operand
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/ywu77/ece411/mp2/simulation/modelsim/mp2_handin_0.do
+add wave -position 0  sim:/mp2_tb/dut/cache0/cache_dp0/data1/data
+add wave -position 0  sim:/mp2_tb/dut/cache0/cache_dp0/tag1/data
+restart -f; run 26500ns
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.lc3b_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.plus2
+# Loading work.mux4
+# Loading work.register
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux2
+# Loading work.br_add
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.shf_sv_unit
+# Loading work.shf
+# Loading work.rshfl_sv_unit
+# Loading work.rshfl
+# Loading work.rshfa_sv_unit
+# Loading work.rshfa
+# Loading work.lshf_sv_unit
+# Loading work.lshf
+# Loading work.clonelowbyte_sv_unit
+# Loading work.clonelowbyte
+# Loading work.mux8
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.pmemconstruct_sv_unit
+# Loading work.pmemconstruct
+# Loading work.array8_sv_unit
+# Loading work.array8
+# Loading work.checklruway_sv_unit
+# Loading work.checklruway
+# Loading work.lru_way_arbitrator_sv_unit
+# Loading work.lru_way_arbitrator
+# Loading work.loadarbitrator_demux_sv_unit
+# Loading work.loadarbitrator_demux
+# Loading work.comparator_v_sv_unit
+# Loading work.comparator_v
+# Loading work.cachehit_decoder_sv_unit
+# Loading work.cachehit_decoder
+# Loading work.linetruncate_sv_unit
+# Loading work.linetruncate
+# Loading work.lineoverwrite_sv_unit
+# Loading work.lineoverwrite
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(73): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid0
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(82): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid1
+# Invalid nzp operand
+# Invalid nzp operand
+# Invalid nzp operand
+do mp2_handin.do
+restart -f; run 26500ns
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.lc3b_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.plus2
+# Loading work.mux4
+# Loading work.register
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux2
+# Loading work.br_add
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.shf_sv_unit
+# Loading work.shf
+# Loading work.rshfl_sv_unit
+# Loading work.rshfl
+# Loading work.rshfa_sv_unit
+# Loading work.rshfa
+# Loading work.lshf_sv_unit
+# Loading work.lshf
+# Loading work.clonelowbyte_sv_unit
+# Loading work.clonelowbyte
+# Loading work.mux8
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.pmemconstruct_sv_unit
+# Loading work.pmemconstruct
+# Loading work.array8_sv_unit
+# Loading work.array8
+# Loading work.checklruway_sv_unit
+# Loading work.checklruway
+# Loading work.lru_way_arbitrator_sv_unit
+# Loading work.lru_way_arbitrator
+# Loading work.loadarbitrator_demux_sv_unit
+# Loading work.loadarbitrator_demux
+# Loading work.comparator_v_sv_unit
+# Loading work.comparator_v
+# Loading work.cachehit_decoder_sv_unit
+# Loading work.cachehit_decoder
+# Loading work.linetruncate_sv_unit
+# Loading work.linetruncate
+# Loading work.lineoverwrite_sv_unit
+# Loading work.lineoverwrite
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(73): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid0
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(82): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid1
+# Invalid nzp operand
+# Invalid nzp operand
+# Invalid nzp operand
+restart -f; run 26500ns
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.lc3b_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.plus2
+# Loading work.mux4
+# Loading work.register
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux2
+# Loading work.br_add
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.shf_sv_unit
+# Loading work.shf
+# Loading work.rshfl_sv_unit
+# Loading work.rshfl
+# Loading work.rshfa_sv_unit
+# Loading work.rshfa
+# Loading work.lshf_sv_unit
+# Loading work.lshf
+# Loading work.clonelowbyte_sv_unit
+# Loading work.clonelowbyte
+# Loading work.mux8
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.pmemconstruct_sv_unit
+# Loading work.pmemconstruct
+# Loading work.array8_sv_unit
+# Loading work.array8
+# Loading work.checklruway_sv_unit
+# Loading work.checklruway
+# Loading work.lru_way_arbitrator_sv_unit
+# Loading work.lru_way_arbitrator
+# Loading work.loadarbitrator_demux_sv_unit
+# Loading work.loadarbitrator_demux
+# Loading work.comparator_v_sv_unit
+# Loading work.comparator_v
+# Loading work.cachehit_decoder_sv_unit
+# Loading work.cachehit_decoder
+# Loading work.linetruncate_sv_unit
+# Loading work.linetruncate
+# Loading work.lineoverwrite_sv_unit
+# Loading work.lineoverwrite
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(73): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid0
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(82): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid1
+# Invalid nzp operand
+# Invalid nzp operand
+# Invalid nzp operand
+write list -window .main_pane.list.interior.cs.body /home/ywu77/Desktop/list.lst
+restart -f; run 26500ns
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.lc3b_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.plus2
+# Loading work.mux4
+# Loading work.register
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux2
+# Loading work.br_add
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.shf_sv_unit
+# Loading work.shf
+# Loading work.rshfl_sv_unit
+# Loading work.rshfl
+# Loading work.rshfa_sv_unit
+# Loading work.rshfa
+# Loading work.lshf_sv_unit
+# Loading work.lshf
+# Loading work.clonelowbyte_sv_unit
+# Loading work.clonelowbyte
+# Loading work.mux8
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.pmemconstruct_sv_unit
+# Loading work.pmemconstruct
+# Loading work.array8_sv_unit
+# Loading work.array8
+# Loading work.checklruway_sv_unit
+# Loading work.checklruway
+# Loading work.lru_way_arbitrator_sv_unit
+# Loading work.lru_way_arbitrator
+# Loading work.loadarbitrator_demux_sv_unit
+# Loading work.loadarbitrator_demux
+# Loading work.comparator_v_sv_unit
+# Loading work.comparator_v
+# Loading work.cachehit_decoder_sv_unit
+# Loading work.cachehit_decoder
+# Loading work.linetruncate_sv_unit
+# Loading work.linetruncate
+# Loading work.lineoverwrite_sv_unit
+# Loading work.lineoverwrite
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(73): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid0
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(82): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid1
+# Invalid nzp operand
+# Invalid nzp operand
+# Invalid nzp operand
+restart -f; run 26500ns
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.lc3b_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.plus2
+# Loading work.mux4
+# Loading work.register
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux2
+# Loading work.br_add
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.shf_sv_unit
+# Loading work.shf
+# Loading work.rshfl_sv_unit
+# Loading work.rshfl
+# Loading work.rshfa_sv_unit
+# Loading work.rshfa
+# Loading work.lshf_sv_unit
+# Loading work.lshf
+# Loading work.clonelowbyte_sv_unit
+# Loading work.clonelowbyte
+# Loading work.mux8
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.pmemconstruct_sv_unit
+# Loading work.pmemconstruct
+# Loading work.array8_sv_unit
+# Loading work.array8
+# Loading work.checklruway_sv_unit
+# Loading work.checklruway
+# Loading work.lru_way_arbitrator_sv_unit
+# Loading work.lru_way_arbitrator
+# Loading work.loadarbitrator_demux_sv_unit
+# Loading work.loadarbitrator_demux
+# Loading work.comparator_v_sv_unit
+# Loading work.comparator_v
+# Loading work.cachehit_decoder_sv_unit
+# Loading work.cachehit_decoder
+# Loading work.linetruncate_sv_unit
+# Loading work.linetruncate
+# Loading work.lineoverwrite_sv_unit
+# Loading work.lineoverwrite
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(73): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid0
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(82): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid1
+# Invalid nzp operand
+# Invalid nzp operand
+# Invalid nzp operand
+add wave -position end  sim:/mp2_tb/dut/cache0/cache_dp0/data1/data
+add wave -position end  sim:/mp2_tb/dut/cache0/cache_dp0/tag1/data
+add wave -position end  sim:/mp2_tb/dut/cpu0/cpu_dp/pc_out
+restart -f; run 26500ns
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.lc3b_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.plus2
+# Loading work.mux4
+# Loading work.register
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.mux2
+# Loading work.br_add
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.shf_sv_unit
+# Loading work.shf
+# Loading work.rshfl_sv_unit
+# Loading work.rshfl
+# Loading work.rshfa_sv_unit
+# Loading work.rshfa
+# Loading work.lshf_sv_unit
+# Loading work.lshf
+# Loading work.clonelowbyte_sv_unit
+# Loading work.clonelowbyte
+# Loading work.mux8
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.pmemconstruct_sv_unit
+# Loading work.pmemconstruct
+# Loading work.array8_sv_unit
+# Loading work.array8
+# Loading work.checklruway_sv_unit
+# Loading work.checklruway
+# Loading work.lru_way_arbitrator_sv_unit
+# Loading work.lru_way_arbitrator
+# Loading work.loadarbitrator_demux_sv_unit
+# Loading work.loadarbitrator_demux
+# Loading work.comparator_v_sv_unit
+# Loading work.comparator_v
+# Loading work.cachehit_decoder_sv_unit
+# Loading work.cachehit_decoder
+# Loading work.linetruncate_sv_unit
+# Loading work.linetruncate
+# Loading work.lineoverwrite_sv_unit
+# Loading work.lineoverwrite
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(73): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid0
+# ** Warning: (vsim-3015) /home/ywu77/ece411/mp2/cache_datapath.sv(82): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'in'. The port definition is at: /home/ywu77/ece411/mp2/array8.sv(7).
+#         Region: /mp2_tb/dut/cache0/cache_dp0/valid1
+# Invalid nzp operand
+# Invalid nzp operand
+# Invalid nzp operand

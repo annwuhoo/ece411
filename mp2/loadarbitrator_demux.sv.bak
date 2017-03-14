@@ -1,0 +1,39 @@
+import lc3b_types::*;
+
+// the correct arrays to output loads to is arbitrated by larb and control signals
+module loadarbitrator_demux
+(
+	input logic load0, load1,
+	input logic load_data, load_tag, load_dirty,
+	
+	output load_way0, load_way1,
+	output load_tag0, load_tag1,
+	output load_dirty0, load_dirty1
+);
+
+always_comb begin
+	load_way0 = 0;
+	load_way1 = 0;
+	load_tag0 = 0; 
+	load_tag1 = 0;
+	load_dirty0 = 0;
+	load_dirty1 = 0;
+	
+	if (load_data) begin
+		load_way0 = 1;
+		load_way1 = 1;
+	end
+	
+	if (load_tag) begin
+		load_tag0 = 1; 
+		load_tag1 = 1;
+	end
+	
+	if (load_dirty) begin
+		load_dirty0 = 1;
+		load_dirty1 = 1;
+	end
+	
+end
+
+endmodule : loadarbitrator_demux

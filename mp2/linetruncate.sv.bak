@@ -1,0 +1,16 @@
+import lc3b_types::*;
+
+/* 
+ * Truncates the cache line to the correct word
+ */
+module linetruncate
+(
+	input lc3b_mem_wmask mem_byte_enable,
+	input lc3b_cache_offset offset,
+	input lc3b_line data,
+	output lc3b_word mem_rdata,
+);
+
+	
+
+endmodule : linetruncate
